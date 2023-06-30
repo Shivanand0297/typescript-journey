@@ -1,3 +1,12 @@
+export interface Mappable {
+  location: {
+    lat: number;
+    lng: number;
+  };
+  markerContent(): string;
+  color: string;
+}
+
 export class OurMap {
   private googleMap: google.maps.Map;
   constructor(divId: string) {
@@ -26,12 +35,4 @@ export class OurMap {
       infoWindow.open(this.googleMap, marker)
     })
   }
-}
-
-interface Mappable {
-  location: {
-    lat: number;
-    lng: number;
-  };
-  markerContent(): string;
 }

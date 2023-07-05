@@ -1,4 +1,3 @@
-import { NumberCollection } from "./NumberCollection";
 
 interface Sortable {
   length: number;

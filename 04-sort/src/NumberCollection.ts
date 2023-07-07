@@ -1,6 +1,8 @@
-export class NumberCollection {
-  constructor(public data: number[]) {
+import { Sorter } from "./Sorter";
 
+export class NumberCollection extends Sorter {
+  constructor(public data: number[]) {
+    super();
   }
 
   get length(): number {  //get -> so that we don't have to run this function length() to access the length value, we can lenght value simply by "numberCollection.length" 
